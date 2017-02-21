@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Set defaults
-local_user='pi'
 backup_dir='/data/backup/games/mednafen'
 
 while test $# -gt 0; do
@@ -52,6 +51,11 @@ while test $# -gt 0; do
                         ;;
         esac
 done
+
+if [ -z "$local_user" ] ; then
+  echo "ERROR - Please supply user using -u or --user. Exiting."
+  exit
+fi
 
 source_dir="/home/${local_user}/.mednafen"
 
