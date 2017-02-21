@@ -68,7 +68,6 @@ while test $# -gt 0; do
 done
 
 echo "$(date +%s) - INFO - logging on as $pi_user@$pi_address"
-exit
 
 local_roms_dir='/data/games/emulator/roms'
 
