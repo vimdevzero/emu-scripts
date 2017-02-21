@@ -9,5 +9,9 @@ if [ $? == 1 ]; then
     echo "Cancelled."
 else
 #    mednafen -fs 1 "$rom"
-  mednafen -fs 0 "${rom}"
+  if [ -z "$1" ] ; then
+    mednafen -fs 0 "${rom}"
+  else
+    mednafen -fs $1 "${rom}"
+  fi
 fi
