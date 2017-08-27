@@ -1,7 +1,7 @@
 #!/bin/bash
 
 rompath='/data/games/emulator/roms'
-rom=$(zenity --title="Mednafen: Load a ROM" --file-selection --filename=$rompath/ --file-filter=""*.zip" ".ZIP"")
+rom=$(zenity --title="Mednafen: Load a ROM" --file-selection --filename=$rompath/ --file-filter=""*.zip" "*.ZIP" "*.md" "*.cue"")
 
 #--file-filter=""*.ogg" "*.wav" "*.aac""
 
